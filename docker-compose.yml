@@ -1,0 +1,13 @@
+version: '2.4'
+
+services:
+  restreamer:
+    build: .
+    ports:
+      - 8080:8080
+      - 8181:8181
+      - 1935:1935
+    volumes:
+      - /opt/restreamer/config:/core/config
+      - /opt/restreamer/data:/core/data
+    privileged: true
